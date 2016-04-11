@@ -7,10 +7,15 @@ https://drive.google.com/open?id=0B0dQCWHI1FhDdDRhcnZVc1M5VEk
 Please download and decompress files. Load each file separately in Matlab and merge them:
 
 load 'evtMNIST_1.mat'
+
 data=evt_MNIST_train_x;
+
 for batch=2:24
+
   load ['evtMNIST_' int2str(2) '.mat'];
+
   data=[data;evt_MNIST_train_x];
+
 end
 
 
